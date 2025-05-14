@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Course Progress Tracker</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6e00ff" />
+
+</head>
+
+<body>
+
+  <h1>📘 Course Progress Tracker</h1>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="stats">
+    <p id="percentText">Progress: 20%</p>
+    <p id="daysLeft">Days remaining: 40</p>
+  </div>
+
+  <button onclick="addProgress()">+2% Complete Today</button>
+  <button onclick="resetProgress()" class="reset-btn">🔁 Reset Progress</button>
+  <button onclick="undoProgress()" class="undo-btn">↩️ Undo</button>
+  <p id="undoStepsText">Undo steps available: 0</p>
+  <button onclick="redoProgress()" class="redo-btn">↪️ Redo</button>
+  <p id="redoStepsText">Redo steps available: 0</p>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

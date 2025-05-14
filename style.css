@@ -1,0 +1,117 @@
+body {
+    background: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    width: 80%;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 30px;
+    background: linear-gradient(90deg, #6e00ff, #00ffe7);
+    width: 20%;
+    transition: width 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00ffe7, 0 0 20px #6e00ff;
+    animation: pulse 2s infinite ease-in-out;
+    border-radius: 10px;
+}
+
+.stats {
+    margin-bottom: 20px;
+}
+
+button {
+    background: #6e00ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #8a2be2;
+}
+
+.reset-btn {
+    background: #ff4c4c;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background: #ff1a1a;
+}
+
+.undo-btn {
+    background: #ffaa00;
+    margin-top: 10px;
+}
+btn:hover {
+    background: #ff8800;
+}
+
+.redo-btn {
+    background: #00bcd4;
+    margin-top: 10px;
+}
+
+.redo-btn:hover {
+    background: #0097a7;
+}
+
+@media only screen and (max-width: 430px) {
+    body {
+      padding: 20px;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    .progress-container {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .stats, #undoStepsText, #redoStepsText {
+      font-size: 0.95em;
+      text-align: center;
+    }
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px #00ffe7, 0 0 20px #6e00ff;
+    }
+    50% {
+      box-shadow: 0 0 15px #00ffe7, 0 0 30px #6e00ff;
+    }
+    100% {
+      box-shadow: 0 0 10px #00ffe7, 0 0 20px #6e00ff;
+    }
+  }
+  
